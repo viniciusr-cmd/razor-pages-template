@@ -1,0 +1,50 @@
+@page
+@model RazorTemplate.Pages.Enrollments.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Enrollment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Enrollment.CourseName" class="control-label"></label>
+                <input asp-for="Enrollment.CourseName" class="form-control" />
+                <span asp-validation-for="Enrollment.CourseName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enrollment.CourseCode" class="control-label"></label>
+                <input asp-for="Enrollment.CourseCode" class="form-control" />
+                <span asp-validation-for="Enrollment.CourseCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enrollment.StartDate" class="control-label"></label>
+                <input asp-for="Enrollment.StartDate" class="form-control" />
+                <span asp-validation-for="Enrollment.StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enrollment.EndDate" class="control-label"></label>
+                <input asp-for="Enrollment.EndDate" class="form-control" />
+                <span asp-validation-for="Enrollment.EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enrollment.StudentId" class="control-label"></label>
+                <select asp-for="Enrollment.StudentId" class ="form-control" asp-items="ViewBag.StudentId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
